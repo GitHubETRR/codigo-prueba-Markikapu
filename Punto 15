@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main(){
+    float a1, a2, perimetro, area;
+    printf("Bienvenido a la calculadora de areas y perímetros de rectángulos\n");
+    printf("Empecemos por uno de sus lados\n");
+    scanf("%f", &a1);
+    printf("Continuemos por el otro\n");
+    scanf("%f", &a2);
+    perimetro=a1*2+a2*2;
+    area=a1*a2;
+    printf("El perimetro de su rectángulo es: %f\n", perimetro);
+    printf("El area de su rectángulo es: %f", area);
+    return 0;
+}
