@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float area, lados;
+    printf("Vamos a calcular cuanto miden los lados de un cuadrado sabiendo su area\n");
+    printf("Ingrese el area de su cadrado en m²\n");
+    scanf("%f", &area);
+    lados=sqrt(area);
+    printf("Los lados de su cuadrado miden%2.fm", lados);
+    return 0;
+}
