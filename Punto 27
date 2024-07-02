@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int ABC, A, B, C;
+    printf("Ingrese un número de 3 cifras\n");
+    scanf("%d", &ABC);
+    
+    A=ABC/100;
+    B=(ABC%100)/10;
+    C=ABC%10;
+    
+    printf("Cifra 1: %d\nCifra 2: %d\nCifra 3: %d", A, B, C);
+    return 0;
+}
