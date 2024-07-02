@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    int A, B, C, S;
+    
+    printf("Sumemos dos números para ver si la suma es par o impar");
+    printf("Ingrese el primer número que desee sumar\n");
+    scanf("%d", &A);
+    printf("Bien, ahora ingrese B\n");
+    scanf("%d", &B);
+    
+    C=A+B;
+    S=C%2;
+    
+    if(S==1){
+        printf("La suma de tus número es impar: %d", &C);
+    }else{
+    printf("La suma de tus números es par: %d", &C);
+    }
+    return 0;
+}
