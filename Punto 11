@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    float cm;
+    printf("Bienvenido al programa que transforma centímetros en pies y pulgadas\n");
+    printf("Ingrese los centímetros\n");
+    scanf("%f", &cm);
+    int pie = cm/30.48;
+    float pul = cm/2.54;
+    printf("Su número vale %d en pies y %2.f en pulgadas",pie, pul);
+    return 0;
+}

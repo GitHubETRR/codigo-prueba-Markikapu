@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int años, dias;
+    printf("Bienvenido a la calculadora de días vividos\n");
+    printf("Ingrese su edad...\n");
+    scanf("%d", &años);
+    dias=años*365;
+    printf("Usted lleva %d dias vividos", dias);
+    return 0;
+}

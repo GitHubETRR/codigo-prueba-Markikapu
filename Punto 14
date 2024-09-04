@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(){
+    float a1, a2, a3;
+    printf("Calculemos el ángulo que no conocemos de un triángulo\n");
+    printf("Ingrese un ángulo\n");
+    scanf("%f", &a1);
+    printf("Ahora ingrese el otro\n");
+    scanf("%f", &a2);
+    a3=180-a1-a2;
+    printf("El valor del otro ángulo es: %f°", a3);
+    return 0;
+}

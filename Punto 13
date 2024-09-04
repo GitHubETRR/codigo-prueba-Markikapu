@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    float kg, precio, pfinal;
+    
+    printf("Esta es la balanza\n");
+    printf("Ingrese el precio por kg de la mercadería\n");
+    scanf("%f", &precio);
+    printf("Ahora ingrese cuanto pesa\n");
+    scanf("%f", &kg);
+    pfinal=precio*kg;
+    printf("Usted tiene que pagar $%f", pfinal);
+    return 0;
+}

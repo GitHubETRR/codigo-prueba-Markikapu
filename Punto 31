@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(){
+    int A, B;
+    printf("Ingrese dos valores y comprobemos si son iguales\n");
+    printf("Ingrese el primer número: ");
+    scanf("%d", &A);
+    printf("Ingrese ngrese el segundo número: ");
+    scanf("%d", &B);
+    
+    if(A==B){
+        printf("Tus números son iguales");
+    }else{
+        printf("Tus números son distintos");
+    }
+    return 0;
+}

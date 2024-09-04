@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float a, b, c; 
+    printf("Vamos a despejar la hipotenusa de un triángulo\n");
+    printf("Ingresa el valor de un cateto (cm)\n");
+    scanf("%f", &a);
+    printf("Bien, ingresa el valor del otro cateto (cm)\n");
+    scanf("%f", &b);
+    c=sqrt(a*a+b*b);
+    printf("La hipotenusa mide: %f cm", c);
+    return 0;
+}
