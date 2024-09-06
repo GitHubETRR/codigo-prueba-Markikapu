@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_CHAR 50
+
+typedef struct{
+    
+    char nombre [MAX_CHAR];
+    int coorX;
+    int coorY;
+    
+}punto_t;
+
+
+punto_t punto1={"Kapu",2,4},punto2={"Jojo",3,5};
+
+void imprime_punto(punto_t);
+
+int main(){
+    punto_t punto3={"Mati",5,1};
+    imprime_punto(punto3);
+    printf("Ingrese un nombre\n");
+    scanf("%s", punto3.nombre);
+    imprime_punto(punto3);
+    strcpy(punto3.nombre, "Hello");
+    return 0;
+}
+void imprime_punto(punto_t punto){   
+    printf("Coord x:%d\n",punto1.coorX);
+    printf("Coord Y:%d\n",punto1.coorY);
+    printf("Coord x:%d\n",punto2.coorX);
+    printf("Coord Y:%d\n",punto2.coorY);
+    printf("Coord x:%d\n",punto.coorX);
+    printf("Coord Y:%d\n",punto.coorY);
+    printf("Nombre: %s\n", punto.nombre);
+    return 0;
+}
