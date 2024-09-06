@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define N 5 
+
+void Rndom_Mtrz(int matriz[N][N]);
+void Num_Max(int *vmax, int matriz[N][N], int *repeticiones, int posiciones[N * N][2]);
+
+int main() {
+    int matriz[N][N];
+    int vmax = 0;
+    int repeticiones = 0;
+    int posiciones[N * N][2]; 
+    
+    Rndom_Mtrz(matriz);
+    Num_Max(&vmax, matriz, &repeticiones, posiciones);
+    
+    printf("El valor máximo es %d y se repite %d veces.\n", vmax, repeticiones);
+    printf("Posiciones donde aparece:\n");
+    for (int i = 0; i < repeticiones; i++) {
+        printf("Fila: %d, Columna: %d\n", posiciones[i][0] + 1, posiciones[i][1] + 1);
+    }
+
+    return 0;
+}
+
+void Rndom_Mtrz(int matriz[N][N]) {
+    srand(time(NULL));
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            matriz[i][j] = rand() % 15 + 1; 
+            printf("%2d ", matriz[i][j]);  
+        }
+        printf("\n");
+    }    
+}
+
+void Num_Max(int *vmax, int matriz[N][N], int *repeticiones, int posiciones[N * N][2]) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (matriz[i][j] > *vmax) {
+                *vmax = matriz[i][j];
+                *repeticiones = 1;
+                posiciones[0][0] = i;
+                posiciones[0][1] = j;
+            } else if (matriz[i][j] == *vmax) {
+                posiciones[*repeticiones][0] = i;
+                posiciones[*repeticiones][1] = j;
+                (*repeticiones)++;
+            }
+        }
+    }
+}
