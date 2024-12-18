@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main(){
+    unsigned s1, s2, m1, m2, h1, h2, sf, mf, hf;
+    printf("Bienvenido a la calculadora de dos tiempos\n");
+    printf("Empecemos por el primer tiempo\n");
+    printf("Ingrese la hora\n");
+    scanf("%d", &h1);
+    printf("Ahora ingrese los minutos\n");
+    scanf("%d", &m1);
+    printf("Por último los segundos\n");
+    scanf("%d", &s1);
+    printf("Bien, vayamos con el segundo tiempo\n");
+    printf("Ingrese la hora\n");
+    scanf("%d", &h2);
+    printf("Ahora ingrese los minutos\n");
+    scanf("%d", &m2);
+    printf("Por último los segundos\n");
+    scanf("%d", &s2);
+    hf=h1+h2;
+    mf=m1+m2;
+    sf=s1+s2;
+    if(sf>=60){
+        mf+=1;   //mf=mf+1
+        sf-=60;  //sf=sf-60
+    }
+    if(mf>=60){
+        hf+=1;  //hf=hf+1
+        mf-=60;  //mf=mf-60
+    }
+    printf("La suma de sus dos tiempos es: %d:%d:%2.d", hf, mf, sf);
+    return 0;
+}

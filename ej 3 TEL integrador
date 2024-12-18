@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LIBROS 5
+#define MAX_VENTAS 10
+#define MAX_DATOS 50
+
+typedef struct{
+    int dia;
+    int mes;
+    int anio;
+}fecha_t;
+
+typedef struct{
+    char titulo [MAX_DATOS];
+    char autor [MAX_DATOS];
+    float precio;
+}libro_t;
+
+typedef struct{
+    libro_t libro;
+    int cantidad;
+    fecha_t fecha;
+}venta_t;
+
+void cargarLibros(libro_t libros[], int *numlibros);
+void realizarVenta(venta_t ventas[], int *numVentas, libro_t libros[], int numLibros);
+float calcularTotalVentas(venta_t ventas[], int numVentas);
+void ventasPorLibro(venta_t ventas[], int numVentas);
+int buscarLibro(libro_t libros[], int numLibros, char titulo[]);
+
+
+int main(){
+    libro_t [MAX_LIBROS];
+    venta_t [MAX_VENTAS];
+    int numlibros = 0, numventas = 0;
+    int opcion;
+    
+    do{
+        printf("\n--- Menú ---\n");
+        printf("1. Cargar libros\n");
+        printf("2. Registrar una venta\n");
+        printf("3. Calcular total de ventas\n");
+        printf("4. Mostrar ventas por libro\n");
+        printf("5. Salir\n");
+        printf("Seleccione una opcion: ");
+        scanf("%d", &opcion);
+            
+        switch(opcion){
+            case 1:
+                cargarLibros(libros, &numLibros);
+                break;
+            case 2:
+                realizarVenta(Ventas, &numVentas, libros, numLibros);
+            case 3:
+            case 3:
+                printf("Total de ventas: $%.2f\n", calcularTotalVentas(ventas, numVentas));
+                break;
+            case 4:
+                ventasPorLibro(ventas, numVentas);
+                break;
+            case 5:
+                printf("¡Hasta luego!\n");
+                break;
+            default:
+                printf("Opcion invalida. Intente de nuevo.\n");
+        }
+    } while(opcion != 5);
+    
+    return 0;
+};
