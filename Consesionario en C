@@ -25,7 +25,7 @@ void verAutos(KapuConcesionario_t autos[], int numAutos) {
 }
 
 void ingresarAuto(KapuConcesionario_t autos[], int *numAutos) {
-    if (*numAutos >= MAX_AUTOS) {
+    if (*numAutos>=MAX_AUTOS) {
         printf("\nSe ha alcanzado el límite de autos.\n");
         return;
     }
