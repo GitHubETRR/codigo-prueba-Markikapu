@@ -2,7 +2,7 @@
 #define MAX_AUTOS 100
 #define MAX_CHAR 30
 
-typedef struct {
+typedef struct{
     char marca[MAX_CHAR];
     char modelo[MAX_CHAR];
     char patente[MAX_CHAR];
@@ -10,12 +10,12 @@ typedef struct {
 } KapuConcesionario_t;
 
 void verAutos(KapuConcesionario_t autos[], int numAutos) {
-    if (numAutos == 0) {
+    if (numAutos == 0){
         printf("\nNo hay autos cargados.\n");
         return;
     }
 
-    for (int i=0;i<numAutos;i++) {
+    for (int i=0;i<numAutos;i++){
         printf("\nAuto %d:\n", i + 1);
         printf("\nMarca: %s\n", autos[i].marca);
         printf("Modelo: %s\n", autos[i].modelo);
@@ -24,8 +24,8 @@ void verAutos(KapuConcesionario_t autos[], int numAutos) {
     }
 }
 
-void ingresarAuto(KapuConcesionario_t autos[], int *numAutos) {
-    if (*numAutos>=MAX_AUTOS) {
+void ingresarAuto(KapuConcesionario_t autos[], int *numAutos){
+    if (*numAutos>=MAX_AUTOS){
         printf("\nSe ha alcanzado el límite de autos.\n");
         return;
     }
@@ -47,12 +47,12 @@ void ingresarAuto(KapuConcesionario_t autos[], int *numAutos) {
     printf("\n\nAuto ingresado con éxito.\n");
 }
 
-int main() {
+int main(){
     KapuConcesionario_t autos[MAX_AUTOS];
     int numAutos = 0;
     int opcion;
 
-    do {
+    do{
         printf("\n-----CONCESIONARIO DE KAPU-----\n");
         printf("\n1. Ver autos\n");
         printf("2. Ingresar un auto\n");
